@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShoesTestPage.MessageView">
+    <ContentView.Content>
+        <StackLayout>
+            <AbsoluteLayout>
+                <BoxView
+                    x:Name="cornerView"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="0,0,18,18"
+                    BackgroundColor="Brown" />
+                <Frame
+                    AbsoluteLayout.LayoutFlags="All"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    x:Name="backgroundFrame"
+                    Padding="12"
+                    HasShadow="False"
+                    BackgroundColor="Brown"
+                    IsClippedToBounds="True"
+                    CornerRadius="18">
+
+                    <Label
+                        x:Name="textLabel"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" />
+
+                </Frame>
+            </AbsoluteLayout>
+            <Label
+                HorizontalOptions="End"
+                Text="27.09.2018 / 11:43 am"
+                FontAttributes="Italic"
+                FontSize="Micro" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
