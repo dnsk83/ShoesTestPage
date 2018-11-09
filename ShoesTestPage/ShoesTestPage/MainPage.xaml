@@ -1,9 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ShoesTestPage"
-    x:Class="ShoesTestPage.MainPage">
+    x:Class="ShoesTestPage.MainPage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -21,6 +23,8 @@
                 <Setter
                     Property="BackgroundColor"
                     Value="#FFFFFF" />
+                <Setter Property="CornerRadius"
+                         Value="0"/>
             </Style>
             <Style
                 TargetType="StackLayout">
@@ -141,13 +145,13 @@
                     </StackLayout>
                 </StackLayout>
 
-                <Grid>
+                <Grid ColumnSpacing="{StaticResource MarginHorizontal}">
                     <Grid.Margin>
                         <Thickness
                             Left="{StaticResource MarginHorizontal}"
                             Top="{StaticResource MarginVertical}"
                             Right="{StaticResource MarginHorizontal}"
-                            Bottom="{StaticResource MarginVertical}" />
+                            Bottom="{StaticResource MarginHorizontal}" />
                     </Grid.Margin>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
@@ -182,7 +186,7 @@
                     <StackLayout.Margin>
                         <Thickness
                             Left="{StaticResource MarginHorizontal}"
-                            Top="{StaticResource MarginVertical}"
+                            Top="{StaticResource MarginHorizontal}"
                             Right="{StaticResource MarginHorizontal}"
                             Bottom="{StaticResource MarginVertical}" />
                     </StackLayout.Margin>
